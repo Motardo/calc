@@ -6,7 +6,7 @@ The `calc` function takes a string argument and returns the value of the resulti
 
 ## Examples
 ```javascript
-calc("1 + 2")          // 3
+calc("1 + 2")        // 3
 calc("-1 / 2")       // -0.5
 calc("2 + 3 * 4")    // 14
 calc("(2 + 3) * 4")  // 20
@@ -18,3 +18,8 @@ See a live codepen demo at [https://codepen.io/motardo/full/LLjJxb](https://code
 
 ## Testing
 Run the tests with the command `node calc.js`
+
+## TODO
+- [ ] Add support for shorthand scientific notation as in `1e9` for 1 billion
+- [ ] Add support for trigonometric functions
+- [ ] Add support for `log` and `ln` notation
