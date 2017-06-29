@@ -1,4 +1,4 @@
-// return the relative precedence of the given operator
+// get the precendence of the given operator
 function prec(str) {
   switch (str) {
     case ')':
@@ -16,7 +16,7 @@ function prec(str) {
   }
 }
 
-// pop an operator off the stack and perform the computation
+// pop one operator off the stack and evaluate it
 function popOp(nums, ops) {
   var op = ops.pop();
   var a = parseFloat(nums.pop());
@@ -62,8 +62,6 @@ function calc(str) {
       case '^':
       case ')':
         if (needOpF) {
-          //var num = parseFloat(nums.pop());
-          //nums.push(num);
           newNumF = true;
           while (prec(str[i]) <= prec(ops[ops.length -1])) {
             popOp(nums, ops);
@@ -98,53 +96,10 @@ function calc(str) {
         needOpF = true;
     }
   }
-  //console.log("Nums: " + nums);
-  //console.log("Ops: " + ops);
   while (ops.length > 0) {
     popOp(nums, ops);
-    //console.log("Nums: " + nums);
-    //console.log("Ops: " + ops);
   }
   return nums[0];
 }
 
-// some tests to make sure everything is working as expected
-var tests = [
-  [calc("-243"), -243],
-  [calc("(-243)"), -243],
-  [calc("-(243)"), -243],
-  [calc("-(-243)"), 243],
-  [calc("-(-2+3)"), -1],
-  [calc("(24)-3"), 21],
-  [calc("-3-4*2"), -11],
-  [calc("3^4*2"), 162],
-  [calc("3+4^2"), 19],
-  [calc("3+-(4-2)^2"), -1],
-  [calc("3+(-4-2)^2"), 39],
-  [calc("(-3-4)*2"), -14],
-  [calc("-(-3-4)*2"), 14],
-  [calc("-(-3-4)*-2"), -14],
-  [calc("-3-4*2*3-5+2"), -30],
-  [calc("((3*(3-4))+2)*3"), -3],
-  [calc("((3.53*(3.02-4.5))+2.88)*3.307"), -7.7529308],
-  [calc("3.53*3.02-4.5+2.88*3.307"), 15.68476],
-  [calc("1/2"), 0.5],
-  [calc("1/-2"), -0.5]
-]
-
-// run the tests and print failures to stdout
-function runTests() {
-  var failCount = 0;
-  console.log("Running " + tests.length + " tests");
-  tests.forEach(function(test) {
-    if (Math.abs(test[0] / test[1] - 1) > 0.0001) {
-      console.log("Fail: " + test[0] + " expected: " + test[1]);
-      failCount++;
-    }
-  });
-  console.log(failCount + " tests failed");
-}
-
-// show the tests and run them
-console.log(tests);
-runTests();
+module.exports = calc;
