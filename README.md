@@ -14,7 +14,7 @@ calc("5^2")          // 25
 ```
 
 ## Demo
-Try it out at [https://codepen.io/motardo/full/LLjJxb](https://codepen.io/motardo/full/LLjJxb)
+Try it out at [https://motardo.github.io/calc/web/index.html](https://motardo.github.io/calc/web/index.html)
 
 ## Testing
 Run the tests with:
