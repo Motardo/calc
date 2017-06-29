@@ -17,8 +17,9 @@ calc("5^2")          // 25
 Try it out at [https://codepen.io/motardo/full/LLjJxb](https://codepen.io/motardo/full/LLjJxb)
 
 ## Testing
+Run the tests with:
 ```sh
-node calc.js
+npm test
 ```
 
 ## About
