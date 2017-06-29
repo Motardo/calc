@@ -1,5 +1,3 @@
-var calc = require("../calc.js");
-
 function updateOutput(arr) {
   var len = arr.length;
   if (len > 2) {    
