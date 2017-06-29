@@ -20,12 +20,17 @@
         </div>
       </div>
     </div>
-    <div class="row" id="form-row">
+    <div class="row">
       <form action="#">
-        <input id="input" type="text" name="input"/>
-        <button id="enter" type="submit">Enter</button>
-        <button id="back">Go Back</button>
-        <button id="clear">Clear</button>
+        <div class="input-group input-group-lg">
+          <input id="input" type="text" class="form-control" aria-label="...">
+          <div class="input-group-btn">
+            <!-- Buttons -->
+            <button class="btn btn-default" id="enter" type="submit">Enter</button>
+            <button class="btn btn-default" id="back">Go Back</button>
+            <button class="btn btn-default" id="clear">Clear</button>
+          </div>
+        </div>
       </form>
     </div>
     <div><span id="msg"></span></div>

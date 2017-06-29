@@ -13,13 +13,6 @@ body {
   padding-bottom: 15px;
 }
 
-#calc-container {
-}
-
-form {
-  display: inline-block;
-}
-
 #msg {
   color: green;
   font: medium monospace;
@@ -30,13 +23,12 @@ form {
   bottom: 10px;
   width: 100%;
   color: green;
-  font-family: monospace;
+  font: 20px monospace;
   text-align: left;
 }
 
 #input {
-  width: 300px;
-  font-family: monospace;
+  font: 20px monospace;
 }
 
 button, input {
@@ -44,7 +36,7 @@ button, input {
 }
 
 #output-container {
-  height: 120px;
+  height: 100px;
   position: relative;
 }
 
