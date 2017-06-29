@@ -1,6 +1,6 @@
 {
   "name": "@motardo/calc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Evaluate mathematical expressions",
   "main": "calc.js",
   "scripts": {
