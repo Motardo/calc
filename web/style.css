@@ -1,0 +1,53 @@
+body {
+  background: black;
+  color: white;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+#calc-container {
+}
+
+form {
+  display: inline-block;
+}
+
+#msg {
+  color: green;
+  font: medium monospace;
+}
+
+#output {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  color: green;
+  font-family: monospace;
+  text-align: left;
+}
+
+#input {
+  width: 300px;
+  font-family: monospace;
+}
+
+button, input {
+  color: black;
+}
+
+#output-container {
+  height: 120px;
+  position: relative;
+}
+
+pre {
+  color: green;
+}
