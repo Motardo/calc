@@ -1,0 +1,57 @@
+<div class="container-fluid content">
+  <h1 class="text-center heading">Calculator</h1>
+  <div id="calc-container">
+    <div id="output-container">
+      <div id="output">
+        <div class="row" id="output3">
+          <div class="col-xs-7" id="eq3"></div>
+          <div class="col-xs-1">=</div>
+          <div class="col-xs-4" id="res3"></div>
+        </div>
+        <div class="row" id="output2">
+          <div class="col-xs-7" id="eq2"></div>
+          <div class="col-xs-1">=</div>
+          <div class="col-xs-4" id="res2"></div>
+        </div>
+        <div class="row" id="output1">
+          <div class="col-xs-7" id="eq1"></div>
+          <div class="col-xs-1">=</div>
+          <div class="col-xs-4" id="res1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <form action="#">
+        <div class="input-group input-group-lg">
+          <input id="input" type="text" class="form-control" aria-label="...">
+          <div class="input-group-btn">
+            <!-- Buttons -->
+            <button class="btn btn-default" id="enter" type="submit">Enter</button>
+            <button class="btn btn-default" id="back">Go Back</button>
+            <button class="btn btn-default" id="clear">Clear</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div><span id="msg"></span></div>
+  </div>
+  <hr/>
+  <div id="about">
+    <h4 class="heading">Usage</h4>
+    <p>
+      Use the operators + - * / ^ to add, subtract, multiply, divide, and exponentiate. Use parenthesis () to set precedence. 
+    </p>
+    <h4 class="heading">Examples</h4>
+    <pre>
+    1 + 2 = 3
+    -1 / 2 = -0.5
+    2 + 3 * 4 = 14
+    (2 + 3) * 4 = 20
+    5^2 = 25
+    </pre>
+    <h4 class="heading">About</h4>
+    <p>
+      This calculator uses the shunting yard algorithm to parse the input string given in infix notation and convert it into a postfix stack based representation. The calculator then performs the computations off the stack until the final answer remains.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "@motardo/calc",
+  "version": "1.0.2",
+  "description": "Evaluate mathematical expressions",
+  "main": "calc.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Motardo/calc.git"
+  },
+  "keywords": [
+    "mathematic",
+    "parser",
+    "calculator",
+    "shunting-yard-algorithm",
+    "javascript"
+  ],
+  "author": "Nathan Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Motardo/calc/issues"
+  },
+  "homepage": "https://github.com/Motardo/calc#readme"
+}
