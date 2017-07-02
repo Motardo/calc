@@ -24,38 +24,31 @@ function updateOutput(arr) {
 }
 
 $(document).ready(function() {
-  $("body").load( "body.html", function( response, status, xhr ) {
-    if ( status == "error" ) {
-      var msg = "Sorry but there was an error: ";
-      $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-    } else {
-      var output = [];
-      $("#clear").on("click", function(e) {
-        e.preventDefault();
-        $("#input").val("").focus();
-        $("#msg").text("Cleared");
-      });
-      $("#enter").on("click", function(e) {
-        e.preventDefault();
-        var input = $("#input").val();
-        var result = calc(input);
-        $("#input").val(result);
-        $("#msg").text("Ready");
-        output.unshift([input,result]);
-        updateOutput(output);
-      });
-      $("#back").on("click", function(e) {
-        e.preventDefault();
-        var eq = output.shift();
-        $("#msg").text("Undid (" + eq[1] + ")");
-        $("#input").val(eq[0]).focus();
-        updateOutput(output);
-      });
-      $("#output3").hide();
-      $("#output2").hide();
-      $("#output1").hide();
-      $("#msg").text("Ready");
-      $("#input").focus();
-    }
+  var output = [];
+  $("#clear").on("click", function(e) {
+    e.preventDefault();
+    $("#input").val("").focus();
+    $("#msg").text("Cleared");
   });
+  $("#enter").on("click", function(e) {
+    e.preventDefault();
+    var input = $("#input").val();
+    var result = calc(input);
+    $("#input").val(result);
+    $("#msg").text("Ready");
+    output.unshift([input,result]);
+    updateOutput(output);
+  });
+  $("#back").on("click", function(e) {
+    e.preventDefault();
+    var eq = output.shift();
+    $("#msg").text("Undid (" + eq[1] + ")");
+    $("#input").val(eq[0]).focus();
+    updateOutput(output);
+  });
+  $("#output3").hide();
+  $("#output2").hide();
+  $("#output1").hide();
+  $("#msg").text("Ready");
+  $("#input").focus();
 });
